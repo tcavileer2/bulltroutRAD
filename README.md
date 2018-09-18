@@ -1,13 +1,13 @@
 # bulltroutRAD
 Fish Creek and Fish Lake RADseq data
 
-##Project Description
+## Project Description
 This is a project to determine if the bull trout population in Fish Lake, ID and Fish Creek, ID are reproductively isoloated.
 Funding came through an iBEST BEACON grant obtained by James Nagler and Paul Hohenlohe. 
 
-##Participants: James Nagler, Paul Hohenlohe, Anne Veillet, Sam Hunter
+## Participants: James Nagler, Paul Hohenlohe, Anne Veillet, Sam Hunter
 
-##Samples
+## Samples
 Fin clip samples (30) came through IDFG and were preserved in 70% EtOH.
 Additional fin clip samples (10) came from Ponderay Lake, ID, again, through IDFG. Below is a list of the 30 samples used for RAD sequencing along with the BestRAD adapters used.
 
@@ -43,7 +43,7 @@ Date	Label_ID	Sample_name	Adapters
 4162018	Ponderay_Lake09	PL09	GCTAACGA
 4162018	Ponderay_Lake10	PL10	TGAAGAGA
 
-##Methods
+## Methods
 
 gDNA iolation: DNeasy Blood & Tissue kit (cat# 69504) was used to isolate gDNA. Samples were isolate between 4/11/2018 and 4/16/2018 in Paul Hohenlohe's lab by Anne Veillet and Tim Cavileer. See the DNeasyBlood and Tissue Handbook 07/2006 p25-27. Samples were eluted in 50ul buffer AE. Samples were quantified via Qubit.
 
