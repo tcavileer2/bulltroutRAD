@@ -1,0 +1,152 @@
+# no modifications to file
+remote working:
+mendel:/mnt/local-scratch1/GRC_Projects/GRC_Wireworm/2017-07-13-WW.
+RAD_HiSeq
+
+screen -S RAD
+
+
+## Fix barcodes R: This added a "GG" to the beginning of the barcodes.
+## However it is no longer necessary because the barcodes had to be
+## regenerated in order to fix some 
+files = c("Plate1_barcodes.txt", "Plate2_barcodes.txt",
+"Plate3_barcodes.txt", "Plate4_barcodes.txt", "Plate5_barcodes.txt")
+for(f in files){ f2 = paste(sapply(strsplit(f, '.', fixed=T), '[', 1),
+'_fixed.txt', sep='') d = read.table(f, header=F, as.is=T) d$V1 =
+paste("GG", d$V1, sep='') write.table(d, file=f2, col.names=F,
+row.names=F, sep='\t', quote=F)
+}
+}
+### Notes about samples:
+### 
+Some samples were renamed slightly to remove preceeding numeric values
+(MT samples).
+
+ID111 and ID110 were apparently mixed accidentally during prep. These
+samples were discarded.
+
+OR1-OR17 are different samples from Or1-Or17 - Hopefully.
+
+#####
+#####
+#####
+#####
+#### Use overlapper to trim adapters ####
+mkdir 01-hts_AdapterTrimmed 00-SetupCleaning.py parallel <
+00-cleaning.sh
+
+#### Parse files through stacks process_radtags ###:
+mkdir 02-process_radtags_f mkdir 02-process_radtags_r
+
+#Plate1 TGACCAAT
+mkdir -p ./02-process_radtags_f/TGACCAAT/ mkdir -p
+./02-process_radtags_r/TGACCAAT/ process_radtags -r -c -q -P -1
+./01-hts_AdapterTrimmed/TGACCAAT_R1.fastq.gz -2
+./01-hts_AdapterTrimmed/TGACCAAT_R2.fastq.gz -b
+./stacks_files/Plate1_barcodes_fixed.txt -e sbfI -i gzfastq -o
+02-process_radtags_f/TGACCAAT/ & process_radtags -r -c -q -P -1
+./01-hts_AdapterTrimmed/TGACCAAT_R2.fastq.gz -2
+./01-hts_AdapterTrimmed/TGACCAAT_R1.fastq.gz -b
+./stacks_files/Plate1_barcodes_fixed.txt -e sbfI -i gzfastq -o
+02-process_radtags_r/TGACCAAT/ &
+
+#Plate2 ACAGTGAT
+mkdir -p ./02-process_radtags_f/ACAGTGAT/ mkdir -p
+./02-process_radtags_r/ACAGTGAT/ process_radtags -r -c -q -P -1
+./01-hts_AdapterTrimmed/ACAGTGAT_R1.fastq.gz -2
+./01-hts_AdapterTrimmed/ACAGTGAT_R2.fastq.gz -b
+./stacks_files/Plate2_barcodes_fixed.txt -e sbfI -i gzfastq -o
+02-process_radtags_f/ACAGTGAT/ & process_radtags -r -c -q -P -1
+./01-hts_AdapterTrimmed/ACAGTGAT_R2.fastq.gz -2
+./01-hts_AdapterTrimmed/ACAGTGAT_R1.fastq.gz -b
+./stacks_files/Plate2_barcodes_fixed.txt -e sbfI -i gzfastq -o
+02-process_radtags_r/ACAGTGAT/ &
+
+
+#Plate3 GCCAATAT
+mkdir -p ./02-process_radtags_f/GCCAATAT/ mkdir -p
+./02-process_radtags_r/GCCAATAT/ process_radtags -r -c -q -P -1
+./01-hts_AdapterTrimmed/GCCAATAT_R1.fastq.gz -2
+./01-hts_AdapterTrimmed/GCCAATAT_R2.fastq.gz -b
+./stacks_files/Plate3_barcodes_fixed.txt -e sbfI -i gzfastq -o
+02-process_radtags_f/GCCAATAT/ & process_radtags -r -c -q -P -1
+./01-hts_AdapterTrimmed/GCCAATAT_R2.fastq.gz -2
+./01-hts_AdapterTrimmed/GCCAATAT_R1.fastq.gz -b
+./stacks_files/Plate3_barcodes_fixed.txt -e sbfI -i gzfastq -o
+02-process_radtags_r/GCCAATAT/ &
+
+
+#Plate4 CAGATCAT
+mkdir -p ./02-process_radtags_f/CAGATCAT/ mkdir -p
+./02-process_radtags_r/CAGATCAT/ process_radtags -r -c -q -P -1
+./01-hts_AdapterTrimmed/CAGATCAT_R1.fastq.gz -2
+./01-hts_AdapterTrimmed/CAGATCAT_R2.fastq.gz -b
+./stacks_files/Plate4_barcodes_fixed.txt -e sbfI -i gzfastq -o
+02-process_radtags_f/CAGATCAT/ & process_radtags -r -c -q -P -1
+./01-hts_AdapterTrimmed/CAGATCAT_R2.fastq.gz -2
+./01-hts_AdapterTrimmed/CAGATCAT_R1.fastq.gz -b
+./stacks_files/Plate4_barcodes_fixed.txt -e sbfI -i gzfastq -o
+02-process_radtags_r/CAGATCAT/ &
+
+#Plate5 ACTTGAAT
+mkdir -p ./02-process_radtags_f/ACTTGAAT/ mkdir -p
+./02-process_radtags_r/ACTTGAAT/ process_radtags -r -c -q -P -1
+./01-hts_AdapterTrimmed/ACTTGAAT_R1.fastq.gz -2
+./01-hts_AdapterTrimmed/ACTTGAAT_R2.fastq.gz -b
+./stacks_files/Plate5_barcodes_fixed.txt -e sbfI -i gzfastq -o
+02-process_radtags_f/ACTTGAAT/ & process_radtags -r -c -q -P -1
+./01-hts_AdapterTrimmed/ACTTGAAT_R2.fastq.gz -2
+./01-hts_AdapterTrimmed/ACTTGAAT_R1.fastq.gz -b
+./stacks_files/Plate5_barcodes_fixed.txt -e sbfI -i gzfastq -o
+02-process_radtags_r/ACTTGAAT/ &
+
+
+### Dump all of the "removed" files:
+rm 02-process_radtags*/*/*.rem.*.fq.gz
+
+## TODO ###
+Should probably remove duplicates on a per-sample basis at this point.
+Or maybe not because gstacks does it?
+
+
+#### All reads have been processed through for both forward and RC
+#### orientation. Now we need to combine reads for each sample ####:
+mkdir 03-combined 03-SetupCombine.py parallel < 03-concat-commands.sh
+
+#### Map reads against WW reference assembly #####
+mkdir idx cd idx
+# link the Masurca Hybrid assembly:
+ln -s
+~/2018-03-23-MaSuRCA-hybrid-assembly/01-MaSuRCA-assembly/CA.mr.41.15.17.
+0.029/final.genome.scf.fasta bwa index -p idx final.genome.scf.fasta cd
+..
+
+mkdir 04-Mapped 04-SetupMapping.py
+
+parallel < 04-mapping-commands.sh
+
+for f in 04-Mapped/*.bam do echo $f `samtools flagstat $f | head -n 5 |
+tail -n 1` >> pctmapped.txt done
+
+for f in *.bam do samtools index $f & done
+
+
+## 
+# http://catchenlab.life.illinois.edu/stacks/manual/#intro Run gstacks
+# to build loci from the aligned paired-end data. We have instructed
+# gstacks to remove any PCR duplicates that it finds.
+# #
+mkdir 05-Stacks gstacks -I ./04-Mapped/ -M
+./fix_metadata/popmap1_LC_location.txt --rm-pcr-duplicates -O
+05-Stacks/popmap1_LC_location -t 55
+
+# Run populations. Calculate Hardy-Weinberg deviation, population
+# statistics, f-statistics and smooth the statistics across the genome.
+# Export several output files.
+# 
+populations -P 05-Stacks/popmap1_LC_location -M
+./fix_metadata/popmap1_LC_location.txt -r 0.65 --ordered_export --vcf
+--genepop --structure --radpainter --phase --fastphase --plink --hzar
+--phylip --phylip_var --treemix --fstats --smooth --hwe -t 8
+
+#and that's all she wrote
