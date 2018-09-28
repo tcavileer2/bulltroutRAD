@@ -1,35 +1,10 @@
-# no modifications to file
 remote working:
-mendel:/mnt/local-scratch1/GRC_Projects/GRC_Wireworm/2017-07-13-WW.
-RAD_HiSeq
+Ox:/home/tcavi/projects/bulltoutRAD
 
-screen -S RAD
+screen -S bulltrout
+<script> --help
 
 
-## Fix barcodes R: This added a "GG" to the beginning of the barcodes.
-## However it is no longer necessary because the barcodes had to be
-## regenerated in order to fix some 
-files = c("Plate1_barcodes.txt", "Plate2_barcodes.txt",
-"Plate3_barcodes.txt", "Plate4_barcodes.txt", "Plate5_barcodes.txt")
-for(f in files){ f2 = paste(sapply(strsplit(f, '.', fixed=T), '[', 1),
-'_fixed.txt', sep='') d = read.table(f, header=F, as.is=T) d$V1 =
-paste("GG", d$V1, sep='') write.table(d, file=f2, col.names=F,
-row.names=F, sep='\t', quote=F)
-}
-}
-### Notes about samples:
-### 
-Some samples were renamed slightly to remove preceeding numeric values
-(MT samples).
-
-ID111 and ID110 were apparently mixed accidentally during prep. These
-samples were discarded.
-
-OR1-OR17 are different samples from Or1-Or17 - Hopefully.
-
-#####
-#####
-#####
 #####
 #### Use overlapper to trim adapters ####
 mkdir 01-hts_AdapterTrimmed 00-SetupCleaning.py parallel <
@@ -149,4 +124,3 @@ populations -P 05-Stacks/popmap1_LC_location -M
 --genepop --structure --radpainter --phase --fastphase --plink --hzar
 --phylip --phylip_var --treemix --fstats --smooth --hwe -t 8
 
-#and that's all she wrote
