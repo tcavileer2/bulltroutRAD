@@ -1,0 +1,1 @@
+hts_AdapterTrimmer -m 50 -O -L ./01-hts_AdapterTrimmed/trim.log -1 ./0rawdata/HT25_S1_L001_R1_001.fastq -2 ./0rawdata/HT25_S1_L001_R2_001.fastq | hts_SeqScreener -S -O -A -L ./01-hts_AdapterTrimmed/trim.log | hts_SeqScreener -k 15 -x .01 -S -s adapters.fa -A -L ./01-hts_AdapterTrimmed/trim.log -p ./01-hts_AdapterTrimmed/HT25

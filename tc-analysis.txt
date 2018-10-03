@@ -15,8 +15,8 @@ parallel < 00-cleaning.sh
 #### Parse files through stacks process_radtags ###:
 mkdir -p ./02-process_radtags_f
 mkdir -p ./02-process_radtags_r
-/home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/shunter/bulltroutRAD/bulltrout_adaptors_fixed.tsv -1 ./01-hts_AdapterTrimmed/HT25_R1.fastq -2 ./01-hts_AdapterTrimmed/HT25_R2.fastq -o ./02-process_radtags_f/ &> ./02-process_radtags_f/pr.log &
-/home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/shunter/bulltroutRAD/bulltrout_adaptors_fixed.tsv -1 ./01-hts_AdapterTrimmed/HT25_R2.fastq -2 ./01-hts_AdapterTrimmed/HT25_R1.fastq -o ./02-process_radtags_r/ &> ./02-process_radtags_r/pr.log &
+/home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/tcavi/bulltroutRAD/bulltrout_adaptors_fixed.txt -1 ./01-hts_AdapterTrimmed/HT25_R1.fastq -2 ./01-hts_AdapterTrimmed/HT25_R2.fastq -o ./02-process_radtags_f/ &> ./02-process_radtags_f/pr.log &
+/home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/tcavi/bulltroutRAD/bulltrout_adaptors_fixed.txt -1 ./01-hts_AdapterTrimmed/HT25_R2.fastq -2 ./01-hts_AdapterTrimmed/HT25_R1.fastq -o ./02-process_radtags_r/ &> ./02-process_radtags_r/pr.log &
 
 
 
@@ -39,11 +39,12 @@ cd ..
 mkdir 04-Mapped
 04-SetupMapping.py
 
-parallel < 04-mapping-commands.sh
+parallel -j 5 < 04-mapping-commands.sh #added -j switch to limit processors to 5 per mapping cmd so as not to overwhelm the server. It has 28 processors. 
 
+#alternatly these can be put in a bash script file and run (sh 04-mapped_pct.sh)
 for f in 04-Mapped/*.bam
 do
-echo $f `samtools flagstat $f | head -n 5 | tail -n 1` >> pctmapped.txt
+echo $f `samtools flagstat $f | head -n 5 | tail -n 1` >> pctmapped.txt # these are NOT single quotes, rather the `.
 done
 
 for f in *.bam
@@ -58,7 +59,7 @@ done
 # gstacks to remove any PCR duplicates that it finds.
 #
 mkdir 05-Stacks
-gstacks -I ./04-Mapped/ -M ./fix_metadata/popmap1_LC_location.txt --rm-pcr-duplicates -O 05-Stacks/popmap1_LC_location -t 55
+/home/tcavi/stacks-2.0b/gstacks -I ./04-Mapped/ -M ./fix_metadata/popmap1_LC_location.txt --rm-pcr-duplicates -O 05-Stacks/popmap1_LC_location -t 55
 
 # Run populations. Calculate Hardy-Weinberg deviation, population statistics, f-statistics and 
 # smooth the statistics across the genome. Export several output files.

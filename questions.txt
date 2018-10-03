@@ -1,3 +1,9 @@
+# 09/27/2018
+## When I run parallel < 00-cleaning.sh I get "Unhandled Execption: id ine did not begin with >"
+## id line in 00-cleaning.sh? or ?
+## I cp the bulltrout_adapters_fixed.txt to adapter.fa but I think this is not really a fasta format and may be causing the problem. How to covert .txt to .fa?
+
+
 #cd to projects/bulltroutRAD/01cleaned
 process_radtags -p ../0rawdata/HT25_flipped_R1.fastq -b ../0rawdata/barcodes_32_2018.txt -o ./ \
 -e sbfI --inline_null -c -q -r &> process_radtags.HT25_flipped_R1.fastq.oe
