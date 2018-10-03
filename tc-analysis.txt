@@ -64,4 +64,4 @@ mkdir 05-Stacks
 # Run populations. Calculate Hardy-Weinberg deviation, population statistics, f-statistics and 
 # smooth the statistics across the genome. Export several output files.
 
-populations -P 05-Stacks/popmap1_LC_location -M ./fix_metadata/popmap1_LC_location.txt -r 0.65 --ordered_export --vcf --genepop --structure --radpainter --phase --fastphase --plink --hzar --phylip --phylip_var --treemix --fstats --smooth --hwe -t 8
+/home/tcavi/stacks-2.0b/populations -P 05-Stacks/popmap1_LC_location -M ./bulltrout_location.txt -r 0.65 --ordered_export --vcf --genepop --structure --radpainter --phase --fastphase --plink --hzar --phylip --phylip_var --treemix --fstats --smooth --hwe -t 8
