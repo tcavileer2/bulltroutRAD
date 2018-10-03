@@ -59,7 +59,7 @@ done
 # gstacks to remove any PCR duplicates that it finds.
 #
 mkdir 05-Stacks
-/home/tcavi/stacks-2.0b/gstacks -I ./04-Mapped/ -M ./fix_metadata/popmap1_LC_location.txt --rm-pcr-duplicates -O 05-Stacks/popmap1_LC_location -t 55
+/home/tcavi/stacks-2.0b/gstacks -I ./04-Mapped/ -M ./bulltrout_location.txt --rm-pcr-duplicates -O 05-Stacks/popmap1_LC_location -t 55
 
 # Run populations. Calculate Hardy-Weinberg deviation, population statistics, f-statistics and 
 # smooth the statistics across the genome. Export several output files.
