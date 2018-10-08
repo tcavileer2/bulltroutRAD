@@ -1,0 +1,45 @@
+gstacks v2.0b, executed 2018-10-02 21:33:14
+/home/tcavi/stacks-2.0b/gstacks -I ./04-Mapped/ -M ./bulltrout_location.txt --rm-pcr-duplicates -O 05-Stacks/popmap1_LC_location -t 55
+Locus/sample distributions will be written to '05-Stacks/popmap1_LC_location/gstacks.log.distribs'.
+
+Configuration for this run:
+  Input mode: reference-based
+  Population map: './bulltrout_location.txt'
+  Input files: 30, e.g. './04-Mapped/G03.bam'
+  Output to: '05-Stacks/popmap1_LC_location/'
+  Model: marukilow (var_alpha: 0.05, gt_alpha: 0.05)
+  Discarding unpaired reads.
+  Removing PCR duplicates.
+
+Reading BAM headers...
+Processing all loci...
+1K...
+2K...
+5K...
+10K...
+20K...
+50K...
+100K...
+done.
+
+Read 297198007 BAM records:
+  kept 226340026 primary alignments (78.8%), of which 114247683 reverse reads
+  skipped 39954167 primary alignments with insufficient mapping qualities (13.9%)
+  skipped 16381452 excessively soft-clipped primary alignments (5.7%)
+  skipped 4377043 unmapped reads (1.5%)
+  skipped some suboptimal (secondary/supplementary) alignment records
+
+  Per-sample stats (details in 'gstacks.log.distribs'):
+    read 9906600.2 records/sample (57375-23353988)
+    kept 70.2%-77.2% of these
+
+Built 183855 loci comprising 112092343 forward reads and 103422459 matching paired-end reads; mean insert length was 275.5 (sd: 81.3).
+Removed 8669884 unpaired (forward) reads (7.7%); kept 103422459 read pairs in 171973 loci.
+Removed 90326226 read pairs whose insert length had already been seen in the same sample as putative PCR duplicates (87.3%); kept 13096233 read pairs.
+
+Genotyped 171973 loci:
+  effective per-sample coverage: mean=6.4x, stdev=3.9x, min=1.1x, max=13.9x
+  mean number of sites per locus: 361.6
+  a consistent phasing was found for 156321 of out 184672 (84.6%) diploid loci needing phasing
+
+gstacks is done.
