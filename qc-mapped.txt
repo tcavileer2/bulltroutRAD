@@ -1,4 +1,4 @@
-Quality control percentages from samtools flagstat call.
+Quality control read numbers and percentages from samtools flagstat call.
 QC-passed reads + QC-failed reads. 
 The second number is residual samtools output for QC-failed reads and can be ignored.
 
