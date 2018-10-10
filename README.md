@@ -1,5 +1,5 @@
 # bulltroutRAD
-Fish Creek and Fish Lake RADseq data
+Fish Lake and Lake Creek RADseq data
 
 ## Project Description
 This is a project to determine if the bull trout population in Fish Lake, ID and Fish Creek, ID are reproductively isoloated.
