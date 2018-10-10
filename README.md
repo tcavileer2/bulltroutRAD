@@ -50,3 +50,6 @@ gDNA iolation: DNeasy Blood & Tissue kit (cat# 69504) was used to isolate gDNA. 
 BestRAD library prep: Anne Veillet followed the protocol outlined in '20160721_BestRAD_annotated.pdf'. 
 
 Analysis: Stacks 2.0b on Ox (Sam Hunter's bioinformatic server)
+
+05-Stacks contains mapped reads against the arctic char genome
+05-Stacks_MT contains mapped reads against the Montana bulltrout data set
