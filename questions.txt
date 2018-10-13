@@ -1,0 +1,16 @@
+# 09/27/2018
+## When I run parallel < 00-cleaning.sh I get "Unhandled Execption: id ine did not begin with >"
+## id line in 00-cleaning.sh? or ?
+## I cp the bulltrout_adapters_fixed.txt to adapter.fa but I think this is not really a fasta format and may be causing the problem. How to covert .txt to .fa?
+
+
+#cd to projects/bulltroutRAD/01cleaned
+process_radtags -p ../0rawdata/HT25_flipped_R1.fastq -b ../0rawdata/barcodes_32_2018.txt -o ./ \
+-e sbfI --inline_null -c -q -r &> process_radtags.HT25_flipped_R1.fastq.oe
+
+#second try. cd to /stacks-2.0b
+process_radtags -p ../projects/bulltroutRAD/0rawdata/HT25_flipped_R1.fastq -b ../projects/bulltroutRAD/0rawdata/barcodes_32_2018.txt -o ./ \
+-e sbfI --inline_null -c -q -r &> ../projects/bulltroutRAD/01cleaned/process_radtags.HT25_flipped_R1.fastq.oe
+
+#how do I add stacks to the PATH so that it runs each time from any dir?
+#do I have to load stacks-2.ob to use any of the cmds?

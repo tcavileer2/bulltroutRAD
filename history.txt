@@ -1,0 +1,901 @@
+    1  ipython
+    2  passwd
+    3  ls
+    4  mkdir projects
+    5  ls
+    6  ls -alFp
+    7  cd projects
+    8  mkdir -p {data/seq,analysis,code}
+    9  ls -s
+   10  ls -alFps
+   11  ls
+   12  ls Flaps
+   13  ls -Flaps
+   14  rmdir -p {data/seq,analysis,code}
+   15  ls
+   16  mkdir -p chinook_RAD{data/seq,analysis,code}
+   17  ls -Flaps
+   18  rmdir -p chinook_RAD{data/seq,analysis,code}
+   19  ls
+   20  mkdir
+   21  mkdir chinookRAD
+   22  cd chinookRAD/
+   23  mkdir -p {data/seq,analysis,code}
+   24  ls -Flaps
+   25  cd ..
+   26  ls -Flaps
+   27  mkdir bulltroutRAD
+   28  ls
+   29  cd chinookRAD/
+   30  ls
+   31  cd data/
+   32  ls
+   33  mkdir raw
+   34  ls -Flaps
+   35  cd..
+   36  cd ..
+   37  ls
+   38  pwd
+   39  ls
+   40  cd data/raw/
+   41  ls
+   42  pwd
+   43  ls -Flaps
+   44  ls lane_2/
+   45  nano README
+   46  ls
+   47  cat /var/log/dpkg.log
+   48  modules
+   49  cat /var/log/dpkg.log | grep -i stacks
+   50  ls
+   51  cd projects/
+   52  ls
+   53  cd bulltroutRAD/
+   54  ls
+   55  nano WORKFLOW2018.txt 
+   56  ls -Flaps
+   57  head contigs2012.fa 
+   58  tail contigs2012.fa 
+   59  wc -l contigs2012.fa 
+   60  cd ..
+   61  cd chinookRAD/
+   62  ls -Flaps
+   63  cd data/raw/
+   64  ls -Flaps
+   65  cd ../../
+   66  cd ..
+   67  ls
+   68  cd ..
+   69  ls -Flaps
+   70  cat .config
+   71  cd .config
+   72  ls -Flaps
+   73  cd ..
+   74  ls -Flaps
+   75  cat .profile
+   76  ./configure --prefix=/home/tcavi/local
+   77  ./config --prefix=/home/tcavi/local
+   78  man conigure
+   79  man configure
+   80  ls
+   81  cls
+   82  cleAR
+   83  clear
+   84  man scp
+   85  ls
+   86  help scp
+   87  manscp
+   88  man scp
+   89  ls
+   90  tar xfvz stacks-2.0b.tar.gz 
+   91  ls
+   92  cd stacks-2.0b/
+   93  ./configure --prefix=/home/tcavi/local
+   94  make
+   95  ls
+   96  ls -Flaps
+   97  cat README 
+   98  cd ..
+   99  ls
+  100  cd projects/bulltroutRAD/
+  101  ls
+  102  cat WORKFLOW2018.txt 
+  103  ls
+  104  head 1000 
+  105  cat 1000
+  106  nano 1000
+  107  head contigs2012.fa 
+  108  tail contigs2012.fa 
+  109  wc -l contigs2012.fa 
+  110  grep ">" contigs2012.fa | wc -l
+  111  man grep
+  112  ls
+  113  cd ../0
+  114  cd ../O
+  115  cd ..
+  116  ls
+  117  cd chinookRAD/
+  118  ls
+  119  cd ../bulltroutRAD/
+  120  ls
+  121  cd 0rawdata/
+  122  ls
+  123  cd ..
+  124  cat WORKFLOW2018.txt 
+  125  ls -Flags
+  126  ls -Flaps
+  127  ls -al
+  128  cd projects/
+  129  ls -alp
+  130  cd bulltroutRAD/
+  131  ls
+  132  ls -alp
+  133  cd 0rawdata/
+  134  ls -al
+  135  cd ..
+  136  ls -al
+  137  cat WORKFLOW2018.txt 
+  138  ls -al
+  139  cd 0rawdata/
+  140  ls -alp
+  141  cd ..
+  142  ls -alp
+  143  man git
+  144  ls
+  145  git init
+  146  ls
+  147  git pull 
+  148  git clone https://github.com/tcavileer2/bulltroutRAD.README.md
+  149  git pull  https://github.com/tcavileer2/bulltroutRAD.README.md
+  150  git pull  https://github.com/tcavileer2/bulltroutRAD/README.md
+  151  git pull https://github.com/tcavileer2/bulltroutRAD/README.md
+  152  git pull 
+  153  git pull
+  154  git help
+  155  git pull help
+  156  git pull https://github.com/tcavileer2/bulltroutRAD/README.md
+  157  exit
+  158  ls
+  159  cd projects/
+  160  ls
+  161  cd bulltroutRAD/
+  162  ls
+  163  ls -Flaps
+  164  ls 0rawdata/
+  165  cd ..
+  166  ls
+  167  mkdir bulltroutRAD_old
+  168  ls
+  169  cd ..
+  170  ;s
+  171  ls
+  172  mv projects/bulltroutRAD/0rawdata/* projects/bulltroutRAD_old/ .
+  173  cd projects/bulltroutRAD/
+  174  cd .git
+  175  rm -R *
+  176  ls
+  177  cd ..
+  178  ls
+  179  rmdir .git
+  180  ls -Flaps
+  181  rm 1000 
+  182  ls
+  183  ls 0rawdata/
+  184  cd ..
+  185  ls
+  186  cd ..
+  187  ls
+  188  rmdir bulltroutRAD_old/
+  189  ls
+  190  cd projects/
+  191  mkdir bulltroutRAD_old
+  192  ls
+  193  mv bulltroutRAD/0rawdata/* bulltroutRAD_old/ .
+  194  mv bulltroutRAD/0rawdata/* bulltroutRAD_old/
+  195  cp bulltroutRAD/0rawdata/* bulltroutRAD_old/
+  196  ls
+  197  cd bulltroutRAD_old/
+  198  ls
+  199  rm HT25_S1_L001_R1_001.fastq 
+  200  ls
+  201  mkdir 0rawdata
+  202  cd 0rawdata/
+  203  cp ~/projects/bulltroutRAD/0rawdata/*.fastq .
+  204  ls -l
+  205  cd ..
+  206  ls
+  207  cd bulltroutRAD
+  208  ;s
+  209  ls
+  210  ls -l
+  211  cd ../bulltroutRAD_old/
+  212  ls
+  213  cp ../bulltroutRAD/contigs2012.fa .
+  214  cp ../bulltroutRAD/WORKFLOW2018.txt .
+  215  ls
+  216  cd ..
+  217  ls
+  218  git clone https://github.com/tcavileer2/bulltroutRAD.git
+  219  cd bulltroutRAD
+  220  ls -l
+  221  ls
+  222  mkdir tools
+  223  mv stacks-2.0b.tar.gz tools/
+  224  ls
+  225  cd tools
+  226  ls
+  227  cd ..
+  228  ls -al
+  229  cd projects/
+  230  ls -al
+  231  cd bulltroutRAD
+  232  ls -al
+  233  ls 0rawdata/
+  234  ls -al 0rawdata/
+  235  cd ../bulltroutRAD_old/
+  236  ls -al
+  237  ls 0rawdata/
+  238  ls -al 0rawdata/
+  239  dcd ..
+  240  cd ..
+  241  ls -al
+  242  rmdir -R bulltroutRAD
+  243  man rmdir
+  244  cd bulltroutRAD
+  245  cd 0rawdata/
+  246  rm *
+  247  cd ..
+  248  rmdir 0rawdata/
+  249  ls -al
+  250  rm *
+  251  ls -al
+  252  cd ..
+  253  ls -al
+  254  rmdir bulltroutRAD
+  255  ls -al
+  256  git clone https://github.com/tcavileer2/bulltroutRAD.git
+  257  ls -al
+  258  cd bulltroutRAD
+  259  ls -al
+  260  mv ../bulltroutRAD_old/contigs2012.fa .
+  261  ls -al
+  262  ls -al ../bulltroutRAD_old/
+  263  man mv
+  264  mkdir 0rawdata
+  265  ls -al
+  266  mv ../bulltroutRAD_old/0rawdata/* .
+  267  ls -al 0rawdata/
+  268  ls -al ../bulltroutRAD_old/0rawdata/
+  269  ls -al
+  270  mv *.fastq 0rawdata/
+  271  ls -al
+  272  ls -al 0rawdata/
+  273  git status
+  274  cd ../bulltroutRAD_old/
+  275  ls -al
+  276  ls -al 0rawdata/
+  277  rmdir 0rawdata/
+  278  ls -al
+  279  rm WORKFLOW2018.txt 
+  280  ls -al
+  281  cd ..
+  282  ls -al
+  283  rm bulltroutRAD_old
+  284  rmdir bulltroutRAD_old/
+  285  ls -al
+  286  cd bulltroutRAD/
+  287  ls -al
+  288  nano README.md 
+  289  ls -al
+  290  cd Example_RAD_scripts/
+  291  ls -al
+  292  nano analysis.txt 
+  293  ls -al
+  294  exi
+  295  q
+  296  quit
+  297  exit
+  298  ls
+  299  cd projects
+  300  cd bulltroutRAD/
+  301  ls -a
+  302  ls -al
+  303  cd 0rawdata/
+  304  ls -al
+  305  cd ..
+  306  cat barcodes.txt 
+  307  git pull origin master
+  308  ls -al
+  309  cat bulltrout_adaptors.txt 
+  310  exit
+  311  ls -al
+  312  cd projects
+  313  ls -al
+  314  cd bulltroutRAD/
+  315  ls -al
+  316  cd ..
+  317  ls -al
+  318  rm contigs2012.fa 
+  319  ls -al
+  320  cd bulltroutRAD/
+  321  ls -al
+  322  git pull origin master
+  323  git status
+  324  cd 0rawdata/
+  325  ls
+  326  ls -al
+  327  cd projects
+  328  ls -al
+  329  cd bulltroutRAD/
+  330  ls -al
+  331  ls -al 0rawdata/
+  332  mkdir 01cleaned
+  333  cat 0rawdata/HT25_flipped_R1.fastq | head -n 20
+  334  ls -al
+  335  raw_dir = 0rawdata/
+  336  cd 01cleaned/
+  337  ls -al
+  338  screen
+  339  screen -rd
+  340  screen -ls
+  341  exit
+  342  screen -r
+  343  exit
+  344  screen -la
+  345  ls -al ../0rawdata/
+  346  process_radtags -p ../0rawdata/HT25_flipped_R1.fastq -b ../0rawdata/barcodes_32_2018.txt -o ./ -e sbfI --inline_null -c -q -r &> process_radtags.HT25_flipped_R1.fastq.oe
+  347  pid
+  348  import stacks2
+  349  cd ../../
+  350  cd ..
+  351  ls -al
+  352  cd stacks-2.0b/
+  353  ls -al
+  354  process_radtags -p ../projects/bulltroutRAD/0rawdata/HT25_flipped_R1.fastq -b ../projects/bulltroutRAD/0rawdata/barcodes_32_2018.txt -o ./ -e sbfI --inline_null -c -q -r &> ../projects/bulltroutRAD/01cleaned/process_radtags.HT25_flipped_R1.fastq.oe
+  355  cd ..
+  356  cd projects/
+  357  cd b
+  358  cd bulltroutRAD/
+  359  ls -al
+  360  source ../../stacks-2.0b/process_radtags -p ../../projects/bulltroutRAD/0rawdata/HT25_flipped_R1.fastq -b ../../projects/bulltroutRAD/0rawdata/barcodes_32_2018.txt -o ./ -e sbfI --inline_null -c -q -r &> process_radtags.HT25_flipped_R1.fastq.oe
+  361  man stacks
+  362  man stacks2.0b
+  363  cd ../../
+  364  cd stacks-2.0b/
+  365  ls -al
+  366  man process_radtags
+  367  cd ../projects/bulltroutRAD/
+  368  ls -a
+  369  ls -al
+  370  cd Example_RAD_scripts/ls -al
+  371  cd Example_RAD_scripts/
+  372  ls -al
+  373  echo $PATH
+  374  cd ~
+  375  pwd
+  376  top
+  377  cd ..
+  378  ls -al
+  379  ls
+  380  clear
+  381  screen -ls
+  382  screen -r 137
+  383  screen -r 13769
+  384  screen -X -S 13769 quit
+  385  screen -ls
+  386  screen -r
+  387  screen -X -S 18409 quit
+  388  screen -R analysis
+  389  screen -r
+  390  ls
+  391  clear
+  392  screen -ls
+  393  screen -X -S 18471 quit
+  394  clear
+  395  screen -ls
+  396  screen -r 18456
+  397  screen -ls
+  398  screen -r
+  399  ls
+  400  cd projects/bulltroutRAD/
+  401  ls -al
+  402  screen -ls
+  403  screen
+  404  screen -R Bulltrout
+  405  screen -R analysis
+  406  clear
+  407  screen -ls
+  408  screen -r 18486
+  409  screen -ls
+  410  screen -r
+  411  ls -al
+  412  cd projects/
+  413  ls
+  414  cd bulltroutRAD/
+  415  ls -al
+  416  cd Example_RAD_scripts/
+  417  ls -al
+  418  ls -al
+  419  cd projects/bulltroutRAD/
+  420  ls -al
+  421  head process_radtags.HT25_flipped_R1.fastq.oe 
+  422  cd Example_RAD_scripts/
+  423  ls-al
+  424  ls -al
+  425  screen -ls
+  426  screen -X 22593 quit
+  427  screen -ls
+  428  screen -X -S 22593 quit
+  429  screen -ls
+  430  screen -X -S 22649 quit
+  431  screen -ls
+  432  screen -r 18456
+  433  clear
+  434  ls -al
+  435  cd Example_RAD_scripts/
+  436  ls -al
+  437  git log
+  438  cd ..
+  439  ls -alp
+  440  ls -alp 01cleaned/
+  441  git rm 01cleaned/process_radtags.HT25_flipped_R1.fastq.oe 
+  442  ls -alp 01cleaned/
+  443  git rm 01cleaned/process_radtags.HT25_flipped_R1.fastq.oe 
+  444  cd 01cleaned/
+  445  ls -alp
+  446  rm process_radtags.HT25_flipped_R1.fastq.oe 
+  447  ls
+  448  cd ..
+  449  ls -alp
+  450  rmdir 01cleaned/
+  451  ls -alp
+  452  git rm process_radtags.HT25_flipped_R1.fastq.oe 
+  453  rm process_radtags.HT25_flipped_R1.fastq.oe 
+  454  ls
+  455  ls -alp
+  456  mv flip* Example_RAD_scripts/.
+  457  ls -alp
+  458  cat bulltrout_adaptors.txt 
+  459  clear
+  460  ls -alp
+  461  ls -alp Example_RAD_scripts/
+  462  cat bulltrout_adaptors.txt 
+  463  ls -alp
+  464  nano bulltrout_adaptors.txt 
+  465  clear
+  466  ls -alp
+  467  mkdir 01-hts_AdapterTrimmed
+  468  ls -alp
+  469  ls -alp Example_RAD_scripts/
+  470  python3 Example_RAD_scripts/00-SetupCleaning.py 
+  471  cd Example_RAD_scripts/
+  472  ls -alp
+  473  nano SetupCleaning.py
+  474  ls -al
+  475  cat 00-SetupCleaning.py 
+  476  cd ..
+  477  ls -al
+  478  screen -r
+  479  screen -r 18456
+  480  screen -R 18456
+  481  screen -ls
+  482  screen -r 18456
+  483  screen -r
+  484  screen -r Bulltrout
+  485  r
+  486  clear
+  487  screen -la
+  488  screen -ls
+  489  screen -X -S 18456 quit
+  490  screen -ls
+  491  screen -R bulltrout
+  492  exit
+  493  ls
+  494  ls -al
+  495  ls -alp
+  496  ls 0rawdata/
+  497  ls -alp 0rawdata/
+  498  screen -ls
+  499  screen -r
+  500  ls -alp
+  501  cd projects/bulltroutRAD/
+  502  ls -alp
+  503  screen -ls
+  504  clear
+  505  cd Example_RAD_scripts/
+  506  ls-alp
+  507  ls -alp
+  508  cat analysis.txt 
+  509  clear
+  510  cd ..
+  511  ls -alp
+  512  git pull
+  513  ls -alp
+  514  git status
+  515  git add 00-cleaning.sh 0rawdata/ Example_RAD_scripts//flip_best_rad.py 
+  516  git status
+  517  git commit -a
+  518  git config --global "tcavi@uidaho.edu"
+  519  git config --global user.email "tcavi@uidaho.edu"
+  520  git config --global user.name "Tim Cavileer"
+  521  sit status
+  522  git status
+  523  git add 00-cleaning.sh 
+  524  git add 0rawdata/
+  525  git status
+  526  git add Example_RAD_scripts/flip*
+  527  git add bulltrout_adaptors_fixed.txt 
+  528  git add contigs2012.fa 
+  529  git status
+  530  git commit -m "updating files"
+  531  git status
+  532  ls -alp
+  533  git add flip_best_rad.py 
+  534  got add flip_trim_160301.pl
+  535  git add flip_trim_160301.pl
+  536  git status
+  537  git commit -m "actually just moving them to Example_RAD_scripts"
+  538  git status
+  539  git push
+  540  git status
+  541  ls -alp
+  542  nano bulltrout_adaptors_fixed.txt 
+  543  clear
+  544  ls -alp
+  545  ls -alp 0rawdata/
+  546  mkdir flipped
+  547  mkdir noflipped
+  548  git mv contigs2012.fa flipped/
+  549  git mv WORKFLOW2018.txt flipped/
+  550  ls -alp
+  551  cd Example_RAD_scripts/
+  552  cd ..
+  553  ls -alp Example_RAD_scripts/
+  554  git mv Example_RAD_scripts/flip_* flipped/
+  555  git mv Example_RAD_scripts/questions.txt .
+  556  ls -alp Example_RAD_scripts/
+  557  git rm Example_RAD_scripts/bulltrout_analysis.txt 
+  558  ls -alp Example_RAD_scripts/
+  559  ls -alp
+  560  ls -alp 0rawdata/
+  561  git rm bulltrout_adaptors.txt 
+  562  ls -alp
+  563  cat 00-cleaning.sh 
+  564  nano 00-cleaning.sh 
+  565  ls -alp
+  566  less 00-SetupCleaning.py 
+  567  ls -alp
+  568  mkdir 01-hts_AdapterTrimmed
+  569  ls -alp 01-hts_AdapterTrimmed/
+  570  ls -alp Example_RAD_scripts/
+  571  ls -alp 0rawdata/
+  572  python 00-SetupCleaning.py 
+  573  ls -alp
+  574  python 00-SetupCleaning.py
+  575  ls -alp
+  576  ls -alp 0rawdata/
+  577  python 00-SetupCleaning.py
+  578  ls -al ./0rawdata/*R1_*.fastq
+  579  hts_SeqScreener --help
+  580  python 00-SetupCleaning.py
+  581  ls -alp
+  582  cat bulltrout_adaptors_fixed.txt adapters.fa
+  583  cat bulltrout_adaptors_fixed.txt > adapters.fa
+  584  ls -alp
+  585  python 00-SetupCleaning.py
+  586  ls -alp
+  587  parallel < 00-cleaning.sh 
+  588  ls -alp
+  589  cat adapters.fa 
+  590  ls -alp
+  591  cat 00-cleaning.sh 
+  592  parallel < 00-cleaning.sh 
+  593  ls -alp
+  594  nano questions.txt 
+  595  nano 00-cleaning.sh 
+  596  nano questions.txt 
+  597  ls -alp
+  598  less adapters.fa 
+  599  cp /home/shunter/bulltroutRAD/adapters.fa .
+  600  ls -al
+  601  head adapters.fa 
+  602  grep ">" adapters.fa | wc -l
+  603  ls -alpclear
+  604  clear
+  605  ls -alp
+  606  python 00-SetupCleaning.py 
+  607  parallel <00-cleaning.sh 
+  608  head 01-hts_AdapterTrimmed/
+  609  clear
+  610  cd 01-hts_AdapterTrimmed/
+  611  ls -al
+  612  head HT25_R1.fastq 
+  613  clear
+  614  grep ">" HT25_R1.fastq | wc -l
+  615  tail HT25_R1.fastq 
+  616  head HT25_R1.fastq 
+  617  grep "AGATCGCA" HT25_R1.fastq | wc -l
+  618  grep "+" HT25_R1.fastq | wc -l
+  619  grep "+" HT25_R2.fastq | wc -l
+  620  ls -alp
+  621  clear
+  622  ls -alp
+  623  cd ..
+  624  mkdir -p ./02-process_radtags_f
+  625  mkdir -p ./02-process_radtags_r
+  626  ls -alp
+  627  /home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/tcavi/bulltroutRAD/bulltrout_adaptors_fixed.txt -1 ./01-hts_AdapterTrimmed/HT25_R1.fastq -2 ./01-hts_AdapterTrimmed/HT25_R2.fastq -o ./02-process_radtags_f/ &> ./02-process_radtags_f/pr.log &
+  628  /home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/tcavi/bulltroutRAD/bulltrout_adaptors_fixed.txt -1 ./01-hts_AdapterTrimmed/HT25_R2.fastq -2 ./01-hts_AdapterTrimmed/HT25_R1.fastq -o ./02-process_radtags_r/ &> ./02-process_radtags_r/pr.log &
+  629  ls -alp
+  630  cd 02-process_radtags_f
+  631  ls -alp
+  632  ls -alp ../01-hts_AdapterTrimmed/
+  633  ls -al
+  634  cat pr.log 
+  635  cd ..
+  636  ls -alp
+  637  head bulltrout_adaptors_fixed.txt 
+  638  cp bulltrout_adaptors_fixed.txt bulltrout_adaptors_fixed.tsv
+  639  cp /home/shunter/bulltroutRAD/bulltrout_adaptors_fixed.tsv .
+  640  ls -alp
+  641  head bulltrout_adaptors_fixed.tsv 
+  642  git rm bulltrout_adaptors_fixed.tsv
+  643  ls -alp
+  644  git rm bulltrout_adaptors_fixed.tsv
+  645  rm bulltrout_adaptors_fixed.tsv 
+  646  ls -alp
+  647  cp /home/shunter/bulltroutRAD/bulltrout_adaptors_fixed.tsv .
+  648  ls -alp
+  649  /home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/tcavi/bulltroutRAD/bulltrout_adaptors_fixed.tsv -1 ./01-hts_AdapterTrimmed/HT25_R1.fastq -2 ./01-hts_AdapterTrimmed/HT25_R2.fastq -o ./02-process_radtags_f/ &> ./02-process_radtags_f/pr.log &
+  650  ls -alp 02-process_radtags_f
+  651  cat 02-process_radtags_f/pr.log 
+  652  /home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/tcavi/projects/bulltroutRAD/bulltrout_adaptors_fixed.tsv -1 ./01-hts_AdapterTrimmed/HT25_R1.fastq -2 ./01-hts_AdapterTrimmed/HT25_R2.fastq -o ./02-process_radtags_f/ &> ./02-process_radtags_f/pr.log &
+  653  cat 02-process_radtags_f/pr.log 
+  654  /home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/tcavi/projects/bulltroutRAD/bulltrout_adaptors_fixed.tsv -1 ./01-hts_AdapterTrimmed/HT25_R2.fastq -2 ./01-hts_AdapterTrimmed/HT25_R1.fastq -o ./02-process_radtags_r/ &> ./02-process_radtags_r/pr.log &
+  655  ls -alp 02-process_radtags_f
+  656  ls -alp 02-process_radtags_f/*.rem.*
+  657  ls -alp 02-process_radtags_f/*.rem.* | wc l
+  658  ls -alp 02-process_radtags_f/*.rem.* | wc -l
+  659  rm 02-process_radtags_*/*.rem.*
+  660  ls -alp 02-process_radtags_f/*.rem.* | wc -l
+  661  ls -alp 02-process_radtags_r/*.rem.* | wc -l
+  662  mkdir 03-combined
+  663  ls -alp
+  664  cd 01-hts_AdapterTrimmed/
+  665  ls -alp
+  666  cd ..
+  667  ls -alp
+  668  nano 03-concat-commands.sh 
+  669  head 03-concat-commands.sh 
+  670  less 03-concat-commands.sh 
+  671  cat 03-combined/
+  672  cat 03-SetupCombine.py 
+  673  ls -alp
+  674  python 03-SetupCombine.py 
+  675  head 03-concatf
+  676  head 03-concatfiles_list.txt 
+  677  clear
+  678  ls -alp
+  679  paralell < 03-concat-commands.sh 
+  680  parallel < 03-concat-commands.sh 
+  681  ls -alp
+  682  mkdir idx
+  683  cd idx
+  684  assembly #####
+  685  mkdir idx
+  686  cd idx
+  687  ls -alp
+  688  cd ..
+  689  ls -alp
+  690  cd ..
+  691  cd idx
+  692  bwa index -p idx GCF_002910315.2_ASM291031v2_genomic.fna.gz 
+  693  ls -alp
+  694  cd ..
+  695  ls -alp
+  696  ls -alp flipped/
+  697  ls -alp
+  698  python 04-SetupMapping.py 
+  699  ls -alp
+  700  parallel -j 5 < 04-mapping-commands.sh 
+  701  cleear
+  702  clear
+  703  ls -alp
+  704  for f in 04-Mapped/*.bam; do echo $f 'samtools flagstat $f | head -n 5 | tail -n 1 >>pctmapped.txt
+done
+
+for f in *.bam
+do
+samtools index $f &
+done
+
+
+
+
+
+  705  clear
+  706  for f in 04-Mapped/*.bam; do echo $f 'samtools flagstat $f | head -n 5 | tail -n 1 >>pctmapped.txt
+done
+
+for f in *.bam
+do
+samtools index $f &
+done
+
+
+
+
+;
+
+  707  nano 04-mapped-pct.sh
+  708  sh 04-mapped-pct.sh 
+  709  nano 04-mapped-pct.sh
+  710  sh 04-mapped-pct.sh 
+  711  nano 04-mapped-pct.sh
+  712  sh 04-mapped-pct.sh 
+  713  nano 04-mapped-pct.sh
+  714  sh 04-mapped-pct.sh 
+  715  ls -alp
+  716  head pctmapped.txt 
+  717  tail pctmapped.txt 
+  718  clear
+  719  ls -alp
+  720  nano 04-mapped-pct.sh
+  721  sh 04-mapped-pct.sh 
+  722  cat pctmapped.txt 
+  723  ls -alp
+  724  samtools --help
+  725  samtools --help | less
+  726  less pctmapped.txt 
+  727  nano 04-mapped-pct.sh
+  728  sh 04-mapped-pct.sh 
+  729  less pctmapped.txt 
+  730  nano 04-mapped-pct.sh
+  731  sh 04-mapped-pct.sh 
+  732  less pctmapped.txt 
+  733  sh 04-mapped-pct.sh 
+  734  nano 04-mapped-pct.sh
+  735  ls -alp 04-Mapped/*.bam
+  736  samtools flagstat 04-Mapped/Y03.bam | head -n 5 | tail -n 1
+  737  samtools index 04-Mapped/Y03.bam &
+  738  head -n 5 04-Mapped/Y03.bam
+  739  clear
+  740  samtools index 04-Mapped/Y03.bam &
+  741  samtools flagstat 04-Mapped/Y03.bam | head -n 5 | tail -n 1
+  742  nano 04-mapped-pct.sh
+  743  sh 04-mapped-pct.sh 
+  744  nano 04-mapped-pct.sh
+  745  sh 04-mapped-pct.sh 
+  746  ls -alp
+  747  cat pctmapped.txt 
+  748  cd 04-Mapped/
+  749  ls
+  750  ls -lp
+  751  cd ..
+  752  samtools flagstat 04-Mapped/Y03.bam | head -n 5 | tail -n 1
+  753  samtools index 04-Mapped/Y03.bam &
+  754  samtools --help
+  755  samtools --help | less
+  756  cd 04-Mapped/
+  757  ls
+  758  head Y03.bam.bai 
+  759  clear
+  760  samtools index 04-Mapped/Y03.bam &
+  761  cd ..
+  762  samtools index 04-Mapped/Y03.bam
+  763  samtools index 04-Mapped/Y03.bam &
+  764  samtools flagstat 04-Mapped/Y03.bam | head -n 5 | tail -n 1
+  765  samtools index 04-Mapped/Y03.bam &
+  766  screen -ls
+  767  clear
+  768  mkdir 05-Stacks
+  769  gstacks -I ./04-Mapped/./fix_metadata/popmap1_LC_location.txt --rm-pcr-duplicates -O 05-Stacks/popmap1_LC_location -t -55
+  770  /home/tcavi/stacks-2.0b/gstacks -I ./04-Mapped/./fix_metadata/popmap1_LC_location.txt --rm-pcr-duplicates -O 05-Stacks/popmap1_LC_location -t -55
+  771  /home/tcavi/stacks-2.0b/gstacks -I ./04-Mapped/./fix_metadata/popmap1_LC_location.txt --rm-pcr-duplicates -O 05-Stacks/popmap1_LC_location -t 55
+  772  /home/tcavi/stacks-2.0b/gstacks -I ./04-Mapped/ ./fix_metadata/popmap1_LC_location.txt --rm-pcr-duplicates -O 05-Stacks/popmap1_LC_location -t 55
+  773  ls -alp
+  774  ls 05-Stacks/
+  775  ls -alp 05-Stacks/
+  776  /home/tcavi/stacks-2.0b/gstacks -I ./04-Mapped/ -M ./fix_metadata/popmap1_LC_location.txt --rm-pcr-duplicates -O 05-Stacks/popmap1_LC_location -t 55
+  777  ls -al
+  778  nano 04-mapped-pct.sh 
+  779  sh 04-mapped-pct.sh 
+  780  ls -alp
+  781  /home/tcavi/stacks-2.0b/gstacks -I ./04-Mapped/ -M ./fix_metadata/popmap1_LC_location.txt --rm-pcr-duplicates -O 05-Stacks/popmap1_LC_location -t 55
+  782  stacks --help
+  783  stacks-2.0b --help
+  784  man stacks
+  785  cat pctmapped.txt 
+  786  rm pctmapped.txt 
+  787  sh 04-mapped-pct.sh 
+  788  /home/tcavi/stacks-2.0b/gstacks -I ./04-Mapped/ -M ./fix_metadata/popmap1_LC_location.txt --rm-pcr-duplicates -O 05-Stacks/popmap1_LC_location -t 55
+  789  git status
+  790  git add 00-SetupCleaning.py 00-cleaning.sh questions.txt tc-analysis.txt 
+  791  git status
+  792  git add 01-hts_AdapterTrimmed/
+  793  git status
+  794  ls
+  795  ls -alp 01-hts_AdapterTrimmed/
+  796  ls -alp 02-process_radtags_f
+  797  ls -alp 02-process_radtags_f | wc -l
+  798  git status
+  799  ls -alp 03-combined/ | wc -l
+  800  git add 03-concat-commands.sh 
+  801  ls -alp 03-concatfiles_list.txt 
+  802  got add 03-concatfiles_list.txt 
+  803  git add 03-concatfiles_list.txt 
+  804  ls -alp 04-Mapped/ | wc -l
+  805  ls -alp 04-Mapped
+  806  git status
+  807  git add 04-SetupMapping.py 04-mapped-pct.sh 04-mapping-commands.sh adapters.fa bulltrout_adaptors_fixed.tsv pctmapped.txt 
+  808  git status
+  809  git commit 
+  810  git status
+  811  git push
+  812  git pull
+  813  git push
+  814  git status
+  815  ls -alp
+  816  git status
+  817  /home/tcavi/stacks-2.0b/gstacks -I ./04-Mapped/ -M ./bulltrout_location.txt --rm-pcr-duplicates -O 05-Stacks/popmap1_LC_location -t 55
+  818  /home/tcavi/stacks-2.0b/populations -P 05-Stacks/popmap1_LC_location -M ./bulltrout_location.txt -r 0.65 --ordered_export --vcf --genepop --structure --radpainter --phase --fastphase --plink --hzar --phylip --phylip_var --treemix --fstats --smooth --hwe -t 8
+  819  ls -alp
+  820  ls -alp 05-Stacks/
+  821  ls -alp 05-Stacks/popmap1_LC_location/
+  822  git status
+  823  ls -alp
+  824  mkdir idx_MT
+  825  ls -alp idx
+  826  ls -alp
+  827  rm idx_MT
+  828  rmdir idx_MT
+  829  mkdir idx_MT
+  830  cd idx_MT/
+  831  ls flipped
+  832  ls -alp ../flipped/
+  833  cp ../flipped/contigs2012.fa .
+  834  ls -alp
+  835  bwa omdex -p idx_MT contigs2012.fa 
+  836  bwa index -p idx_MT contigs2012.fa 
+  837  cd ..
+  838  mkdir 04-Mapped_MT
+  839  ls -alp idx_MT/
+  840  ls -alp idx
+  841  ls -alp idx/idx
+  842  parallel -j 5 < 04-mapping-commands-MT.sh 
+  843  python 04-SetupMapping-MT.py 
+  844  parallel -j 5 < 04-mapping-commands-MT.sh 
+  845  clear
+  846  ls -alp
+  847  python 04-SetupMapping_MT.py 
+  848  ls -alp
+  849  cat 04-mapping-commands_MT.sh 
+  850  parallel -j 5 <04-mapping-commands_MT.sh 
+  851  ls -thl
+  852  ls -thl *.sh
+  853  cp 04-mapped-pct.sh 04-mapped-pct_MT.sh 
+  854  nano04-mapped-pct.sh 04-mapped-pct_MT.sh 
+  855  nano 04-mapped-pct.sh 04-mapped-pct_MT.sh 
+  856  ls -thl *.sh
+  857  nano 04-mapped-pct_MT.sh 
+  858  h 04-mapped-pct_MT.sh 
+  859  sh 04-mapped-pct_MT.sh 
+  860  ls -thl *.sh
+  861  ls -thl *.txt
+  862  less pctmapped_MT.txt 
+  863  clear
+  864  ls -thl
+  865  ls -thl 04-Mapped_MT/
+  866  ls -thl 04-Mapped/
+  867  stacks --help
+  868  cd ~
+  869  ls -alph
+  870  ls -thl
+  871  ls -a
+  872  ls -al
+  873  ls -al }less
+  874  ls -al | less
+  875  clear
+  876  history
+  877  cat history > history.txt
+  878  history > history.txt
