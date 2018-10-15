@@ -1,0 +1,9 @@
+#### Parse files through stacks process_radtags ###:
+mkdir -p ./02-process_radtags_f
+mkdir -p ./02-process_radtags_r
+/home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/tcavi/bulltroutRAD/bulltrout_adaptors_fixed.txt -1 ./01-hts_AdapterTrimmed/HT25_R1.fastq -2 ./01-hts_AdapterTrimmed/HT25_R2.fastq -o ./02-process_radtags_f/ &> ./02-process_radtags_f/pr.log &
+/home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/tcavi/bulltroutRAD/bulltrout_adaptors_fixed.txt -1 ./01-hts_AdapterTrimmed/HT25_R2.fastq -2 ./01-hts_AdapterTrimmed/HT25_R1.fastq -o ./02-process_radtags_r/ &> ./02-process_radtags_r/pr.log &
+
+### Dump all of the "removed" files:
+rm 02-process_radtags*/*.rem.*.fq
+
