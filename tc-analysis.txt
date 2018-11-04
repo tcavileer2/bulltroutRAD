@@ -1,11 +1,13 @@
 Working directory:
 ox:/home/shunter/bulltroutRAD/
 
-
 # Stacks compiled in:
 /home/tcavi/stacks-2.0b/process_radtags --help
 
-
+# trying to filter pcr duplicate clones prior to trimming adaptor step 
+# this is an altenate to using gstacks --rm-pcr-duplicates 
+mkdir 01clone_filtered 
+$ /home/tcavi/stacks-2.0b/clone_filter -1 ./0rawdata/HT25_S1_L001_R1_001.fastq -2 ./0rawdata/HT25_S1_L001_R2_001.fastq -i fastq -o ./01clone_filtered/ 
 
 #### Use overlapper to trim adapters ####
 # should call bulltrout adapters barcodes and reflex file name accordingly
