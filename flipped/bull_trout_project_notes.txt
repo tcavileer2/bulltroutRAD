@@ -3,10 +3,14 @@
 
 
 # flip_trim_2yeast_1811_2.pl needs .fasta files as input, can not use fasta.gz
-gunzip ../0rawdata/HT25_S1* ./00-rawfasta/
+# make a dir 00-rawdata and unzip R1 and R2
+mkdir 00-rawfasta
+gunzip ../0rawdata/HT25_S1*
+cd 00-rawfasta
+tcavi@ox:~/projects/bulltroutRAD/flipped/00-rawfasta$ mv ../../0rawdata/*.fastq .
 
-# run flip_trim
-./flip_trim_2yeast_1811_2.pl barcodes_32_2018.txt ../0rawdata/HT25_S1_L001_R1_001.fastq ../0rawdata/HT25_S1_L001_R2_001.fastq ./01-flipped/HT25_flipped_R1.fastq ./01-flipped/HT25_flipped_R2.fastq ./01-flipped/flipped_counts.txt
+# run flip_trim looking for SbfI
+./flip_trim_160301_bulltrout.pl barcodes_32_2018.txt ./00-rawfasta/HT25_S1_L001_R1_001.fastq ./00-rawfasta/HT25_S1_L001_R2_001.fastq ./01-flipped/HT25_flipped_R1.fastq ./01-flipped/HT25_flipped_R2.fastq ./01-flipped/flipped_counts.txt
 
 # ./flip_trim_2yeast_1811_2.pl barcodes_32_2018.txt ../0rawdata/HT25_S1_L001_R1_001.fastq ../0rawdata/HT25_S1_L001_R2_001.fastq ./01flip/HT25_flipped_R1.fastq ./01flip/HT25_flipped_R2.fastq ./01flip/flipped_counts.txt
 
