@@ -1,10 +1,12 @@
-#bull trout notes on Ox file cleanup
-# ls --group-directories-first -thl
+# bull trout notes on Ox file cleanup
 
-# 11/19/2018
-# used up all the space on Ox. Need to compress files and clean up unwanted files
+ls --group-directories-first -thl # group directories first
+du -sh * # get size of disk space used
 
-# file sizes before gzipping with pigz
+## 11/19/2018
+## used up all the space on Ox. Need to compress files and clean up unwanted files
+
+## file sizes before gzipping with pigz
 tcavi@ox:~/projects/bulltroutRAD/0rawdata$ ls --group-directories-first -thl
 total 177G
 -rw-rwxr-- 1 tcavi bio 70G Sep 18 22:18 HT25_S1_L001_R2_001.fastq
@@ -12,7 +14,7 @@ total 177G
 -rw-rwxr-- 1 tcavi bio 47G Aug  3 12:52 HT25_flipped_R1.fastq
 -rw-rwxr-- 1 tcavi bio 48G Aug  3 12:52 HT25_flipped_R2.fastq
 -rw-rwxr-- 1 tcavi bio 271 Aug  3 12:25 barcodes_32_2018.txt
-# gz files after pigz
+## gz files after pigz
 tcavi@ox:~/projects/bulltroutRAD/0rawdata$ ls -thl
 total 49G
 -rw-rwxr-- 1 tcavi bio  16G Sep 18 22:18 HT25_S1_L001_R2_001.fastq.gz
