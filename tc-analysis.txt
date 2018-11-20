@@ -4,11 +4,6 @@ ox:/home/shunter/bulltroutRAD/
 # Stacks compiled in:
 /home/tcavi/stacks-2.0b/process_radtags --help
 
-# trying to filter pcr duplicate clones prior to trimming adaptor step 
-# this is an altenate to using gstacks --rm-pcr-duplicates 
-mkdir 01clone_filtered 
-$ /home/tcavi/stacks-2.0b/clone_filter -1 ./0rawdata/HT25_S1_L001_R1_001.fastq -2 ./0rawdata/HT25_S1_L001_R2_001.fastq -i fastq -o ./01clone_filtered/ 
-
 #### Use overlapper to trim adapters ####
 # should call bulltrout adapters barcodes and reflex file name accordingly
 mkdir 01-hts_AdapterTrimmed
@@ -20,9 +15,6 @@ mkdir -p ./02-process_radtags_f
 mkdir -p ./02-process_radtags_r
 /home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/tcavi/bulltroutRAD/bulltrout_adaptors_fixed.txt -1 ./01-hts_AdapterTrimmed/HT25_R1.fastq -2 ./01-hts_AdapterTrimmed/HT25_R2.fastq -o ./02-process_radtags_f/ &> ./02-process_radtags_f/pr.log &
 /home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/tcavi/bulltroutRAD/bulltrout_adaptors_fixed.txt -1 ./01-hts_AdapterTrimmed/HT25_R2.fastq -2 ./01-hts_AdapterTrimmed/HT25_R1.fastq -o ./02-process_radtags_r/ &> ./02-process_radtags_r/pr.log &
-
-
-
 
 ### Dump all of the "removed" files:
 rm 02-process_radtags*/*.rem.*.fq
