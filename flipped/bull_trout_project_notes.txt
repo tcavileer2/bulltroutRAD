@@ -17,26 +17,105 @@ tcavi@ox:~/projects/bulltroutRAD/flipped/00-rawfasta$ mv ../../0rawdata/*.fastq 
 
 ## need to demultiplex barcodes prior to running clone_filter. Ox runs out of memory and chokes.
 ## Parse files through stacks process_radtags
-
 $ /home/tcavi/stacks-2.0b/process_radtags -p ./01-flipped --inline_null -i gzfastq -b ./barcodes_30_2018.txt -o ./02-processed -e sbfI -r -c -q
-
-Processing single-end data.
-Using Phred+33 encoding for quality scores.
-Found 2 input file(s).
-Searching for single-end, inlined barcodes.
-Loaded 30 barcodes (8bp).
-Will attempt to recover barcodes with at most 1 mismatches.
-Processing file 1 of 2 [HT25_flipped_R2.fastq.gz]
-
-
-
-
-
+$ /home/tcavi/stacks-2.0b/process_radtags -p ./01-flipped --inline_inline -i gzfastq -b ./barcodes_30_2018.txt -o ./020-processed -e sbfI -r -c -q &> process_radtags_bulltrout.oe # Nope, runs with --inline_null but not inline_inline
+$ /home/tcavi/stacks-2.0b/process_radtags -P -1 ./01-flipped/HT25_flipped_R1.fastq.gz -2 ./01-flipped/HT25_flipped_R2.fastq.gz --inline_null -i gzfastq -b ./barcodes_30_2018.txt -o ./020-processed -e sbfI -r -c -q &> process_radtags_bulltrout.oe
 
 
 ## run clone_filter
-~/stacks-2.0b/clone_filter -1 ./01-flipped/HT25_flipped_R1.fastq.gz -2 ./01-flipped/HT25_flipped_R2.fastq.gz -i gzfastq -o ./02-processed -D
-63754297 pairs of reads input. 26060845 pairs of reads output, discarded 37693452 pairs of reads, 59.12% clone reads.
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_AAACATCG.1.fq.gz -2 ./020-processed/sample_AAACATCG.2.fq.gz -i gzfastq -o ./030-decloned -D
+10757848 pairs of reads input. 3658609 pairs of reads output, discarded 7099239 pairs of reads, 65.99% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_AACAACCA.1.fq.gz -2 ./020-processed/sample_AACAACCA.2.fq.gz -i gzfastq -o ./030-decloned -D
+7482413 pairs of reads input. 2564827 pairs of reads output, discarded 4917586 pairs of reads, 65.72% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_AACCGAGA.1.fq.gz -2 ./020-processed/sample_AACCGAGA.2.fq.gz -i gzfastq -o ./030-decloned -D
+7214367 pairs of reads input. 2806514 pairs of reads output, discarded 4407853 pairs of reads, 61.10% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_AACGCTTA.1.fq.gz -2 ./020-processed/sample_AACGCTTA.2.fq.gz -i gzfastq -o ./030-decloned -D
+695088 pairs of reads input. 239783 pairs of reads output, discarded 455305 pairs of reads, 65.50% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_AAGACGGA.1.fq.gz -2 ./020-processed/sample_AAGACGGA.2.fq.gz -i gzfastq -o ./030-decloned -D
+3568325 pairs of reads input. 1251052 pairs of reads output, discarded 2317273 pairs of reads, 64.94% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_AATGTTGC.1.fq.gz -2 ./020-processed/sample_AATGTTGC.2.fq.gz -i gzfastq -o ./030-decloned -D
+225889 pairs of reads input. 2488143 pairs of reads output, discarded 4737746 pairs of reads, 65.57% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_ACAAGCTA.1.fq.gz -2 ./020-processed/sample_ACAAGCTA.2.fq.gz -i gzfastq -o ./030-decloned -D
+6175999 pairs of reads input. 2161597 pairs of reads output, discarded 4014402 pairs of reads, 65.00% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_ACACGACC.1.fq.gz -2 ./020-processed/sample_ACACGACC.2.fq.gz -i gzfastq -o ./030-decloned -D
+23467 pairs of reads input. 8655 pairs of reads output, discarded 14812 pairs of reads, 63.12% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_ACAGATTC.1.fq.gz -2 ./020-processed/sample_ACAGATTC.2.fq.gz -i gzfastq -o ./030-decloned -D
+5827227 pairs of reads input. 1961988 pairs of reads output, discarded 3865239 pairs of reads, 66.33% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_ACATTGGC.1.fq.gz -2 ./020-processed/sample_ACATTGGC.2.fq.gz -i gzfastq -o ./030-decloned -D
+1046836 pairs of reads input. 368558 pairs of reads output, discarded 678278 pairs of reads, 64.79% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_ACCACTGT.1.fq.gz -2 ./020-processed/sample_ACCACTGT.2.fq.gz -i gzfastq -o ./030-decloned -D
+10459158 pairs of reads input. 3546309 pairs of reads output, discarded 6912849 pairs of reads, 66.09% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_AGATCGCA.1.fq.gz -2 ./020-processed/sample_AGATCGCA.2.fq.gz -i gzfastq -o ./030-decloned -D
+10325666 pairs of reads input. 3512649 pairs of reads output, discarded 6813017 pairs of reads, 65.98% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_AGCAGGAA.1.fq.gz -2 ./020-processed/sample_AGCAGGAA.2.fq.gz -i gzfastq -o ./030-decloned -D
+2233042 pairs of reads input. 767741 pairs of reads output, discarded 1465301 pairs of reads, 65.62% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_AGTCACTA.1.fq.gz -2 ./020-processed/sample_AGTCACTA.2.fq.gz -i gzfastq -o ./030-decloned -D
+6070796 pairs of reads input. 2068944 pairs of reads output, discarded 4001852 pairs of reads, 65.92% clone read
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_ATCCTGTA.1.fq.gz -2 ./020-processed/sample_ATCCTGTA.2.fq.gz -i gzfastq -o ./030-decloned -D
+5232227 pairs of reads input. 1780993 pairs of reads output, discarded 3451234 pairs of reads, 65.96% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_CCATCCTC.1.fq.gz -2 ./020-processed/sample_CCATCCTC.2.fq.gz -i gzfastq -o ./030-decloned -D
+3414529 pairs of reads input. 1184692 pairs of reads output, discarded 2229837 pairs of reads, 65.30% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_CCGAAGTA.1.fq.gz -2 ./020-processed/sample_CCGAAGTA.2.fq.gz -i gzfastq -o ./030-decloned -D
+9684795 pairs of reads input. 3295569 pairs of reads output, discarded 6389226 pairs of reads, 65.97% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_CCGACAAC.1.fq.gz -2 ./020-processed/sample_CCGACAAC.2.fq.gz -i gzfastq -o ./030-decloned -D
+635071 pairs of reads input. 215810 pairs of reads output, discarded 419261 pairs of reads, 66.02% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_CCGTGAGA.1.fq.gz -2 ./020-processed/sample_CCGTGAGA.2.fq.gz -i gzfastq -o ./030-decloned -D
+3293125 pairs of reads input. 1127389 pairs of reads output, discarded 2165736 pairs of reads, 65.77% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_CCTAATCC.1.fq.gz -2 ./020-processed/sample_CCTAATCC.2.fq.gz -i gzfastq -o ./030-decloned -D
+38880 pairs of reads input. 13905 pairs of reads output, discarded 24975 pairs of reads, 64.24% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_CCTCCTGA.1.fq.gz -2 ./020-processed/sample_CCTCCTGA.2.fq.gz -i gzfastq -o ./030-decloned -D
+40146 pairs of reads input. 14413 pairs of reads output, discarded 25733 pairs of reads, 64.10% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_CGAACTTA.1.fq.gz -2 ./020-processed/sample_CGAACTTA.2.fq.gz -i gzfastq -o ./030-decloned -D
+3827129 pairs of reads input. 1299485 pairs of reads output, discarded 2527644 pairs of reads, 66.05% clone reads
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_GATAGACA.1.fq.gz -2 ./020-processed/sample_GATAGACA.2.fq.gz -i gzfastq -o ./030-decloned -D
+11085594 pairs of reads input. 3773024 pairs of reads output, discarded 7312570 pairs of reads, 65.96% clone reads
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_GCCACATA.1.fq.gz -2 ./020-processed/sample_GCCACATA.2.fq.gz -i gzfastq -o ./030-decloned -D
+2111956 pairs of reads input. 733324 pairs of reads output, discarded 1378632 pairs of reads, 65.28% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_GCGAGTAA.1.fq.gz -2 ./020-processed/sample_GCGAGTAA.2.fq.gz -i gzfastq -o ./030-decloned -D
+2347565 pairs of reads input. 825667 pairs of reads output, discarded 1521898 pairs of reads, 64.83% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_GCTAACGA.1.fq.gz -2 ./020-processed/sample_GCTAACGA.2.fq.gz -i gzfastq -o ./030-decloned -D
+3528652 pairs of reads input. 1229560 pairs of reads output, discarded 2299092 pairs of reads, 65.15% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_TATCAGCA.1.fq.gz -2 ./020-processed/sample_TATCAGCA.2.fq.gz -i gzfastq -o ./030-decloned -D
+5288548 pairs of reads input. 1823845 pairs of reads output, discarded 3464703 pairs of reads, 65.51% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_TCCGTCTA.1.fq.gz -2 ./020-processed/sample_TCCGTCTA.2.fq.gz -i gzfastq -o ./030-decloned -D
+2677211 pairs of reads input. 927384 pairs of reads output, discarded 1749827 pairs of reads, 65.36% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_TCTTCACA.1.fq.gz -2 ./020-processed/sample_TCTTCACA.2.fq.gz -i gzfastq -o ./030-decloned -D
+3608384 pairs of reads input. 1252212 pairs of reads output, discarded 2356172 pairs of reads, 65.30% clone reads.
+
+~/stacks-2.0b/clone_filter -1 ./020-processed/sample_TGAAGAGA.1.fq.gz -2 ./020-processed/sample_TGAAGAGA.2.fq.gz -i gzfastq -o ./030-decloned -D
+4528206 pairs of reads input. 1556157 pairs of reads output, discarded 2972049 pairs of reads, 65.63% clone reads.
+
+
+
+
 
 
 
