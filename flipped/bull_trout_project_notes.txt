@@ -1,5 +1,5 @@
 # pcr duplicate rate was high first time through gstacks using Sam Hunter's pipeline
-## duplicate rate was ~78% for mapping against both Arctic Char and MT Bull Trout datasets
+## duplicate rate was ~87.3% for mapping against both Arctic Char and 88% MT Bull Trout datasets
 
 
 ## flip_trim_2yeast_1811_2.pl needs .fasta files as input, can not use fasta.gz
@@ -17,8 +17,6 @@ tcavi@ox:~/projects/bulltroutRAD/flipped/00-rawfasta$ mv ../../0rawdata/*.fastq 
 
 ## need to demultiplex barcodes prior to running clone_filter. Ox runs out of memory and chokes.
 ## Parse files through stacks process_radtags
-$ /home/tcavi/stacks-2.0b/process_radtags -p ./01-flipped --inline_null -i gzfastq -b ./barcodes_30_2018.txt -o ./02-processed -e sbfI -r -c -q
-$ /home/tcavi/stacks-2.0b/process_radtags -p ./01-flipped --inline_inline -i gzfastq -b ./barcodes_30_2018.txt -o ./020-processed -e sbfI -r -c -q &> process_radtags_bulltrout.oe # Nope, runs with --inline_null but not inline_inline
 $ /home/tcavi/stacks-2.0b/process_radtags -P -1 ./01-flipped/HT25_flipped_R1.fastq.gz -2 ./01-flipped/HT25_flipped_R2.fastq.gz --inline_null -i gzfastq -b ./barcodes_30_2018.txt -o ./020-processed -e sbfI -r -c -q &> process_radtags_bulltrout.oe
 
 
@@ -39,7 +37,7 @@ $ /home/tcavi/stacks-2.0b/process_radtags -P -1 ./01-flipped/HT25_flipped_R1.fas
 3568325 pairs of reads input. 1251052 pairs of reads output, discarded 2317273 pairs of reads, 64.94% clone reads.
 
 ~/stacks-2.0b/clone_filter -1 ./020-processed/sample_AATGTTGC.1.fq.gz -2 ./020-processed/sample_AATGTTGC.2.fq.gz -i gzfastq -o ./030-decloned -D
-225889 pairs of reads input. 2488143 pairs of reads output, discarded 4737746 pairs of reads, 65.57% clone reads.
+7225889 pairs of reads input. 2488143 pairs of reads output, discarded 4737746 pairs of reads, 65.57% clone reads.
 
 ~/stacks-2.0b/clone_filter -1 ./020-processed/sample_ACAAGCTA.1.fq.gz -2 ./020-processed/sample_ACAAGCTA.2.fq.gz -i gzfastq -o ./030-decloned -D
 6175999 pairs of reads input. 2161597 pairs of reads output, discarded 4014402 pairs of reads, 65.00% clone reads.
@@ -119,11 +117,5 @@ $ /home/tcavi/stacks-2.0b/process_radtags -P -1 ./01-flipped/HT25_flipped_R1.fas
 
 
 
-#### trash did not work
-# mkdir -p ./02-process_radtags_f
-# mkdir -p ./02-process_radtags_r
-# /home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i gzfastq --inline_null -b /home/tcavi/bulltroutRAD/bulltrout_adaptors_fixed.tsv -1 ./01-flipped/HT25_flipped_R1.fastq.gz -2 ./01-flipped/HT25_flipped_R2.fastq.gz -o ./03-process_radtags_r/ &> ./03-process_radtags_r/pr.log &
-# /home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i gzfastq --inline_null -b /home/tcavi/bulltroutRAD/bulltrout_adaptors_fixed.tsv -1 ./01-flipped/HT25_flipped_R2.fastq.gz -2 ./01-flipped/HT25_flipped_R1.fastq.gz -o ./03-process_radtags_r/ &> ./03-process_radtags_r/pr.log &
-# /home/tcavi/stacks-2.0b/process_radtags -p ./01-flipped --inline_null -i gzfastq -b /home/tcavi/bulltroutRAD/bulltrout_adaptors_fixed.tsv -o ./02-processed -e sbfI -r -c -q
-# ~/stacks-2.0b/clone_filter -1 ./01-flipped/HT25_flipped_R1.fastq.gz -2 ./01-flipped/HT25_flipped_R2.fastq.gz -i gzfastq -o ./02-processed -D
-# 63754297 pairs of reads input. 26060845 pairs of reads output, discarded 37693452 pairs of reads, 59.12% clone reads.
+#### trash 
+#### stuff that did not work
