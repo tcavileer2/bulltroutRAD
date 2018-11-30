@@ -1,0 +1,62 @@
+Working directory:
+ox:/home/shunter/bulltroutRAD/
+
+# Stacks compiled in:
+/home/tcavi/stacks-2.0b/process_radtags --help
+
+#### Use overlapper to trim adapters ####
+# should call bulltrout adapters barcodes and reflex file name accordingly
+mkdir 01-hts_AdapterTrimmed
+00-SetupCleaning.py
+parallel < 00-cleaning.sh
+
+#### Parse files through stacks process_radtags ###:
+mkdir -p ./02-process_radtags_f
+mkdir -p ./02-process_radtags_r
+/home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/tcavi/bulltroutRAD/bulltrout_adaptors_fixed.txt -1 ./01-hts_AdapterTrimmed/HT25_R1.fastq -2 ./01-hts_AdapterTrimmed/HT25_R2.fastq -o ./02-process_radtags_f/ &> ./02-process_radtags_f/pr.log &
+/home/tcavi/stacks-2.0b/process_radtags -r -c -q -P -e sbfI -i fastq --inline_null -b /home/tcavi/bulltroutRAD/bulltrout_adaptors_fixed.txt -1 ./01-hts_AdapterTrimmed/HT25_R2.fastq -2 ./01-hts_AdapterTrimmed/HT25_R1.fastq -o ./02-process_radtags_r/ &> ./02-process_radtags_r/pr.log &
+
+### Dump all of the "removed" files:
+rm 02-process_radtags*/*.rem.*.fq
+
+#### All reads have been processed through for both forward and RC orientation. Now we need to combine reads for each sample ####:
+mkdir 03-combined
+03-SetupCombine.py
+parallel < 03-concat-commands.sh
+
+#### Map reads against Arctic char reference assembly #####
+mkdir idx
+cd idx
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/910/315/GCF_002910315.2_ASM291031v2/GCF_002910315.2_ASM291031v2_genomic.fna.gz
+bwa index -p idx GCF_002910315.2_ASM291031v2_genomic.fna.gz
+cd ..
+
+mkdir 04-Mapped
+04-SetupMapping.py
+
+parallel -j 5 < 04-mapping-commands.sh #added -j switch to limit processors to 5 per mapping cmd so as not to overwhelm the server. It has 28 processors. 
+
+#alternatively these can be put in a bash script file and run (sh 04-mapped_pct.sh)
+for f in 04-Mapped/*.bam
+do
+echo $f `samtools flagstat $f | head -n 5 | tail -n 1` >> pctmapped.txt # these are NOT single quotes, rather the `.
+done
+
+for f in *.bam
+do
+samtools index $f &
+done
+
+
+## 
+# http://catchenlab.life.illinois.edu/stacks/manual/#intro
+# Run gstacks to build loci from the aligned paired-end data. We have instructed
+# gstacks to remove any PCR duplicates that it finds.
+#
+mkdir 05-Stacks
+/home/tcavi/stacks-2.0b/gstacks -I ./04-Mapped/ -M ./bulltrout_location.txt --rm-pcr-duplicates -O 05-Stacks/popmap1_LC_location -t 55
+
+# Run populations. Calculate Hardy-Weinberg deviation, population statistics, f-statistics and 
+# smooth the statistics across the genome. Export several output files.
+
+/home/tcavi/stacks-2.0b/populations -P 05-Stacks/popmap1_LC_location -M ./bulltrout_location.txt -r 0.65 --ordered_export --vcf --genepop --structure --radpainter --phase --fastphase --plink --hzar --phylip --phylip_var --treemix --fstats --smooth --hwe -t 8
