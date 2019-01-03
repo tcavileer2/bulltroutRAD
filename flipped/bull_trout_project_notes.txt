@@ -21,6 +21,7 @@ $ /home/tcavi/stacks-2.0b/process_radtags -P -1 ./01-flipped/HT25_flipped_R1.fas
 
 
 ## run clone_filter
+## first line is code run, second line is output at end with % clone reads aka pcr duplicates
 ~/stacks-2.0b/clone_filter -1 ./02-processed/sample_AAACATCG.1.fq.gz -2 ./02-processed/sample_AAACATCG.2.fq.gz -i gzfastq -o ./03-decloned -D
 10757848 pairs of reads input. 3658609 pairs of reads output, discarded 7099239 pairs of reads, 65.99% clone reads.
 
