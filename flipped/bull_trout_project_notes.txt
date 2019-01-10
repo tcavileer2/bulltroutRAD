@@ -13,12 +13,50 @@ tcavi@ox:~/projects/bulltroutRAD/flipped/00-rawfasta$ mv ../../0rawdata/*.fastq 
 
 ## run flip_trim looking for SbfI
 ./flip_trim_160301_bulltrout.pl barcodes_32_2018.txt ./00-rawfasta/HT25_S1_L001_R1_001.fastq ./00-rawfasta/HT25_S1_L001_R2_001.fastq ./01-flipped/HT25_flipped_R1.fastq ./01-flipped/HT25_flipped_R2.fastq ./01-flipped/flipped_counts.txt
-
+## results
+281607036 total reads; -0 ambiguous barcodes; -0 ambiguous RAD-Tags; +0 recovered; -373043 low quality reads; 281233993 retained reads.
+281607036 total sequences
+        0 ambiguous barcode drops (0.0%)
+   373043 low quality read drops (0.1%)
+        0 ambiguous RAD-Tag drops (0.0%)
 
 ## need to demultiplex barcodes prior to running clone_filter. Ox runs out of memory and chokes.
 ## Parse files through stacks process_radtags to de-multiplex
 $ /home/tcavi/stacks-2.0b/process_radtags -P -1 ./01-flipped/HT25_flipped_R1.fastq.gz -2 ./01-flipped/HT25_flipped_R2.fastq.gz --inline_null -i gzfastq -b ./barcodes_30_2018.txt -o ./02-processed -e sbfI -r -c -q &> process_radtags_bulltrout.oe
+## demultiplexed results
+Retained Reads	281233993
 
+Barcode	Total	NoRadTag	LowQuality	Retained
+ACAAGCTA	12381906	0	15745	12366161
+AACAACCA	15002318	0	19631	14982687
+AGATCGCA	20701540	0	26416	20675124
+CCGAAGTA	19417830	0	25346	19392484
+GATAGACA	22225996	0	28813	22197183
+TATCAGCA	10603598	0	13937	10589661
+AATGTTGC	14487974	0	18975	14468999
+CCATCCTC	6846136	0	8989	6837147
+AAACATCG	21569280	0	28129	21541151
+AACCGAGA	14465800	0	19395	14446405
+AGCAGGAA	4477450	0	5955	4471495
+CCGTGAGA	6603116	0	8867	6594249
+GCCACATA	4234208	0	5404	4228804
+TCCGTCTA	5367514	0	6895	5360619
+ACACGACC	47064	0	66	46998
+CCGACAAC	1273140	0	1559	1271581
+ACATTGGC	2098800	0	2695	2096105
+AACGCTTA	1393634	0	1818	1391816
+AGTCACTA	12171638	0	15784	12155854
+CCTCCTGA	80470	0	92	80378
+GCGAGTAA	4708716	0	7115	4701601
+TCTTCACA	7235034	0	9634	7225400
+ACAGATTC	11683506	0	15261	11668245
+CCTAATCC	77936	0	92	77844
+ACCACTGT	20971696	0	28024	20943672
+AAGACGGA	7156416	0	10326	7146090
+ATCCTGTA	10491490	0	14172	10477318
+CGAACTTA	7673944	0	10350	7663594
+GCTAACGA	7077874	0	10750	7067124
+TGAAGAGA	9081012	0	12808	9068204
 
 ## run clone_filter
 ## first line is code run, second line is output at end with % clone reads aka pcr duplicates
