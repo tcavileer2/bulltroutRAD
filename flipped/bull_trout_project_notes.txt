@@ -1,5 +1,5 @@
 # pcr duplicate rate was high first time through gstacks using Sam Hunter's pipeline
-## duplicate rate was ~87.3% for mapping against both Arctic Char and 88% MT Bull Trout datasets
+## duplicate rate was high for mapping against Arctic Char (87.3%) and MT Bull Trout (88%) datasets
 
 
 ## flip_trim_2yeast_1811_2.pl needs .fasta files as input, can not use fasta.gz
