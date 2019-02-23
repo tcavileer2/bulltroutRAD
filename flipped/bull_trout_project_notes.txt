@@ -150,10 +150,24 @@ TGAAGAGA	9081012	0	12808	9068204
 ~/stacks-2.0b/clone_filter -1 ./02-processed/sample_TGAAGAGA.1.fq.gz -2 ./02-processed/sample_TGAAGAGA.2.fq.gz -i gzfastq -o ./03-decloned -D
 4528206 pairs of reads input. 1556157 pairs of reads output, discarded 2972049 pairs of reads, 65.63% clone reads.
 
+## renaming barcoded samples to sample IDs?
+### how? grep? find/replace? 
 
+## Mapping
+### need to modify .py script to generate .sh cmd file
+### sample names different than when using hts pipeline. Need to modify python script (04-SetupMapping.py) to generate new 04-mapping-commands.sh.
 
+### flipped pipeline 
+### tcavi@ox:~/projects/bulltroutRAD/flipped/03-decloned 
+-rw-rw-r-- 1 tcavi tcavi 175M Nov 21 14:43 sample_AACCGAGA.1.1.fq.gz
+-rw-rw-r-- 1 tcavi tcavi 189M Nov 21 14:43 sample_AACCGAGA.2.2.fq.gz
+-rw-rw-r-- 1 tcavi tcavi 133M Nov 21 14:39 sample_AACAACCA.1.1.fq.gz
+-rw-rw-r-- 1 tcavi tcavi 171M Nov 21 14:39 sample_AACAACCA.2.2.fq.gz
 
-
+### hts pipeline examples
+tcavi@ox:~/projects/bulltroutRAD/hts_pipeline/03-combined
+-rw-rw-r-- 1 tcavi bio 5.5M Sep 30 12:23 PL04.2.fq.gz
+-rw-rw-r-- 1 tcavi bio 4.9M Sep 30 12:23 PL04.1.fq.gz
 
 
 #### trash 
