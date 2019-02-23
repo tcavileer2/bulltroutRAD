@@ -152,6 +152,67 @@ TGAAGAGA	9081012	0	12808	9068204
 
 ## renaming barcoded samples to sample IDs?
 ### how? grep? find/replace? 
+### from history_rename65
+ 2052  mv sample_ACAAGCTA.1.1.fq.gz G03.1.1.fq.gz
+ 2053  mv sample_ACAAGCTA.2.2.fq.gz G03.2.2.fq.gz
+ 2054  mv sample_AACAACCA.1.1.fq.gz G04.1.1.fq.gz
+ 2055  mv sample_AACAACCA.2.2.fq.gz G04.2.2.fq.gz
+ 2056  mv sample_AGATCGCA.1.1.fq.gz G05.1.1.fq.gz
+ 2057  mv sample_AGATCGCA.2.2.fq.gz G05.2.2.fq.gz
+ 2058  mv sample_CCGAAGTA.2.2.fq.gz G06.2.2.fq.gz
+ 2059  mv sample_CCGAAGTA.1.1.fq.gz G06.1.1.fq.gz
+ 2060  mv sample_GATAGACA.1.1.fq.gz G07.1.1.fq.gz
+ 2061  mv sample_GATAGACA.2.2.fq.gz G07.2.2.fq.gz
+ 2062  mv sample_TATCAGCA.1.1.fq.gz G08.1.1.fq.gz
+ 2063  mv sample_TATCAGCA.2.2.fq.gz G08.2.2.fq.gz
+ 2064  mv sample_AATGTTGC.2.2.fq.gz G09.2.2.fq.gz
+ 2065  mv sample_AATGTTGC.1.1.fq.gz G09.1.1.fq.gz
+ 2066  mv sample_CCATCCTC.1.1.fq.gz G10.1.1.fq.gz
+ 2067  mv sample_CCATCCTC.2.2.fq.gz G10.2.2.fq.gz
+ 2068  mv sample_AAACATCG.2.2.fq.gz G11.2.2.fq.gz
+ 2069  mv sample_AAACATCG.1.1.fq.gz G11.1.1.fq.gz
+ 2070  mv sample_AACCGAGA.1.1.fq.gz G12.1.1.fq.gz
+ 2071  mv sample_AACCGAGA.2.2.fq.gz G12.2.2.fq.gz
+ 2072  mv sample_AGCAGGAA.2.2.fq.gz G13.2.2.fq.gz
+ 2073  mv sample_AGCAGGAA.1.1.fq.gz G13.1.1.fq.gz
+ 2074  mv sample_CCGTGAGA.1.1.fq.gz G14.1.1.fq.gz
+ 2075  mv sample_CCGTGAGA.2.2.fq.gz G14.2.2.fq.gz
+ 2076  mv sample_GCCACATA.1.1.fq.gz G15.1.1.fq.gz
+ 2077  mv sample_GCCACATA.2.2.fq.gz G15.2.2.fq.gz
+ 2078  mv sample_TCCGTCTA.2.2.fq.gz G16.2.2.fq.gz
+ 2079  mv sample_TCCGTCTA.1.1.fq.gz G16.1.1.fq.gz
+ 2080  mv sample_ACACGACC.1.1.fq.gz G23.1.1.fq.gz
+ 2081  mv sample_ACACGACC.2.2.fq.gz G23.2.2.fq.gz
+ 2082  mv sample_CCGACAAC.2.2.fq.gz G24.2.2.fq.gz
+ 2083  mv sample_CCGACAAC.1.1.fq.gz G24.1.1.fq.gz
+ 2084  mv sample_GCGAGTAA.1.1.fq.gz PL01.1.1.fq.gz
+ 2085  mv sample_GCGAGTAA.2.2.fq.gz PL01.2.2.fq.gz
+ 2086  mv sample_TCTTCACA.2.2.fq.gz PL02.2.2.fq.gz
+ 2087  mv sample_TCTTCACA.1.1.fq.gz PL02.1.1.fq.gz
+ 2088  mv sample_ACAGATTC.1.1.fq.gz PL03.1.1.fq.gz
+ 2089  mv sample_ACAGATTC.2.2.fq.gz PL03.2.2.fq.gz
+ 2090  mv sample_CCTAATCC.2.2.fq.gz PL04.2.2.fq.gz
+ 2091  mv sample_CCTAATCC.1.1.fq.gz PL04.1.1.fq.gz
+ 2092  mv sample_ACCACTGT.1.1.fq.gz PL05.1.1.fq.gz
+ 2093  mv sample_ACCACTGT.2.2.fq.gz PL05.2.2.fq.gz
+ 2094  mv sample_AAGACGGA.2.2.fq.gz PL06.2.2.fq.gz
+ 2095  mv sample_AAGACGGA.1.1.fq.gz PL06.1.1.fq.gz
+ 2096  mv sample_ATCCTGTA.1.1.fq.gz PL07.1.1.fq.gz
+ 2097  mv sample_ATCCTGTA.2.2.fq.gz PL07.2.2.fq.gz
+ 2098  mv sample_CGAACTTA.2.2.fq.gz PL08.2.2.fq.gz
+ 2099  mv sample_CGAACTTA.1.1.fq.gz PL08.1.1.fq.gz
+ 2100  mv sample_GCTAACGA.1.1.fq.gz PL09.1.1.fq.gz
+ 2101  mv sample_GCTAACGA.2.2.fq.gz PL09.2.2.fq.gz
+ 2102  mv sample_TGAAGAGA.2.2.fq.gz PL10.2.2.fq.gz
+ 2103  mv sample_TGAAGAGA.1.1.fq.gz PL10.1.1.fq.gz
+ 2104  mv sample_ACATTGGC.1.1.fq.gz R05.1.1.fq.gz 
+ 2105  mv sample_ACATTGGC.2.2.fq.gz R05.2.2.fq.gz 
+ 2106  mv sample_AACGCTTA.2.2.fq.gz Y01.2.2.fq.gz
+ 2107  mv sample_AACGCTTA.1.1.fq.gz Y01.1.1.fq.gz
+ 2108  mv sample_AGTCACTA.1.1.fq.gz Y02.1.1.fq.gz
+ 2109  mv sample_AGTCACTA.2.2.fq.gz Y02.2.2.fq.gz
+ 2110  mv sample_CCTCCTGA.2.2.fq.gz Y03.2.2.fq.gz
+ 2111  mv sample_CCTCCTGA.1.1.fq.gz Y03.1.1.fq.gz
 
 ## Mapping
 ### need to modify .py script to generate .sh cmd file
