@@ -5,7 +5,7 @@ Fish Lake and Lake Creek RADseq data
 This is a project to determine if the bull trout population in Fish Lake, ID and Fish Creek, ID are reproductively isoloated.
 Funding came through an iBEST BEACON grant obtained by James Nagler and Paul Hohenlohe. 
 
-## Participants: James Nagler, Paul Hohenlohe, Anne Veillet, Sam Hunter
+## Participants: James Nagler, Paul Hohenlohe, Anne Veillet, Sam Hunter, Tim Cavileer
 
 ## Samples
 Fin clip samples (30) came through IDFG and were preserved in 70% EtOH.
