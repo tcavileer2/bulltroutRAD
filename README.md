@@ -58,3 +58,5 @@ Mapped reads against and ran  Stacks 2.0b and populations against both the Arcti
 05-Stacks contains mapped reads against the arctic char genome
 05-Stacks_MT contains mapped reads against the Montana bulltrout data set
 >>>>>>> 3169c4e40cee774a1d4fb826ca611f9777460266
+
+this is a test edit

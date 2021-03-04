@@ -5,7 +5,7 @@ ox:/home/shunter/bulltroutRAD/
 /home/tcavi/stacks-2.0b/process_radtags --help
 
 #### Use overlapper to trim adapters ####
-# should call bulltrout adapters barcodes and reflex file name accordingly
+# should call bulltrout adapters barcodes and reflect file name accordingly
 mkdir 01-hts_AdapterTrimmed
 00-SetupCleaning.py
 parallel < 00-cleaning.sh
